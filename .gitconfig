@@ -1,0 +1,35 @@
+[diff]
+	tool = bc4
+[merge]
+	tool = bc4
+
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+
+[difftool "bc4"]
+	trustExitCode = true
+	path = c:/program files/beyond compare 4/BComp.exe
+	cmd = \"c:/Program Files/Beyond Compare 4/BComp.exe\" \"$LOCAL\" \"$REMOTE\"
+[mergetool "bc4"]
+	path = c:/program files/beyond compare 4/bcomp.exe
+	trustExitCode = true
+	cmd = \"c:/Program Files/Beyond Compare 4/BCompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+
+[color]
+	ui = true
+[core]
+	editor = 'vim'
+	quotepath = false
+[http]
+[push]
+	default = simple
+[alias]
+	dt = difftool --dir-diff
+
+[log]
+	date = short
+
+[format]
+	pretty = format:%C(Red)%h %Creset%ad%Cgreen %an %Creset%s%Creset
